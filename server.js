@@ -19,7 +19,18 @@ app.use(express.static("website"));
 
 // Setup Server
 let port = 8000;
-const server = app.listen (port, listening)
-function listening () {
-  console.log("Server is running in port 8000")
+const server = app.listen(port, listening);
+function listening() {
+  console.log("Server is running in port 8000");
 }
+
+app.get("/get", function (req, res) {
+  res.send(projectData);
+});
+
+app.post("/post", function (req, res) {
+  projectData.temperature = req.body.temperature;
+  projectData.feelings = req.body.feelings;
+  projectData.date = req.body.date;
+  res.send();
+});
