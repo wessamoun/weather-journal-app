@@ -1,5 +1,5 @@
 /* Global Variables */
-const apiKey = "d583d787346eed6c128cfa147f61e40f";
+const apiKey = "d583d787346eed6c128cfa147f61e40f&units=metric";
 const generate = document.getElementById("generate");
 // Create a new date instance dynamically with JS
 let d = new Date();
